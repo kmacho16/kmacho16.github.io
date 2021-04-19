@@ -1,0 +1,9 @@
+.uppercase {
+  text-transform: uppercase;
+}
+.about {
+  padding: 0 5em;
+}
+.text-body {
+  text-align: justify;
+}

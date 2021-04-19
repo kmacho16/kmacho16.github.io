@@ -1,4 +1,12 @@
 import React, { FC, useState, useEffect } from 'react';
+import {
+  FaBeer,
+  FaLinkedin,
+  FaGithub,
+  FaVoicemail,
+  FaEnvelope
+} from 'react-icons/fa';
+
 import './PrincipalComponent.css';
 const PrincipalComponent: FC = () => {
   const [type, setType] = useState<string>('');
@@ -11,8 +19,9 @@ const PrincipalComponent: FC = () => {
   const [finishText, setFinishText] = useState<boolean>(false);
   const [count, setCount] = useState(0);
   let i = 0;
-  let speed = 150;
+  let speed = 80;
   let speedErase = 100;
+  let cicle = [1000, 1000, 5000];
   let out = '';
   const typeWriter = () => {
     if (i < message[position].length) {
@@ -24,7 +33,7 @@ const PrincipalComponent: FC = () => {
     } else {
       setTimeout(() => {
         setFinishText(true);
-      }, 1000);
+      }, cicle[position]);
     }
   };
   const deleteWriter = () => {
@@ -64,11 +73,16 @@ const PrincipalComponent: FC = () => {
         />
       </div>
       <h1>
-        Hi, I'm Juan<span className="red-text">Camachoo</span>{' '}
+        Hi, I'm Juan<span className="red-text">Kmacho</span>{' '}
       </h1>
       <h1>
         <span className="red-text">{type}</span> | Developer
       </h1>
+      <div>
+        <FaLinkedin className="icons" size="1.5em" />
+        <FaGithub className="icons" size="1.5em" />
+        <FaEnvelope className="icons" size="1.5em" />
+      </div>
     </div>
   );
 };

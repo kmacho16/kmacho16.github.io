@@ -1,9 +1,30 @@
-.red-text {
-  color: #fe0e3a;
-}
 .avatar {
   border-radius: 50%;
   border: 10px solid #fe0e3a;
   height: 200px;
   width: 200px;
+}
+
+.icons {
+  margin: 0 3em;
+  padding: 2px;
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border-bottom: 0px solid red;
+  -webkit-transition: border-bottom 0.1s ease-out;
+  -moz-transition: border-bottom 0.1s ease-out;
+  -o-transition: border-bottom 0.1s ease-out;
+  transition: border-bottom 0.1s ease-out;
+}
+
+.icons:hover {
+  cursor: pointer;
+  color: #fe0e3a;
+  border-radius: 0%;
+  border-bottom: 5px solid red;
+  -webkit-transition: border-bottom 0.1s ease-out;
+  -moz-transition: border-bottom 0.1s ease-out;
+  -o-transition: border-bottom 0.1s ease-out;
+  transition: border-bottom 0.1s ease-out;
 }

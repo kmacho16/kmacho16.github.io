@@ -64,7 +64,7 @@ const PrincipalComponent: FC = () => {
         />
       </div>
       <h1>
-        Hi, I'm Juan<span className="red-text">Camacho</span>{' '}
+        Hi, I'm Juan<span className="red-text">Camachoo</span>{' '}
       </h1>
       <h1>
         <span className="red-text">{type}</span> | Developer

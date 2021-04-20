@@ -3,9 +3,11 @@ import {
   FaBeer,
   FaLinkedin,
   FaGithub,
-  FaVoicemail,
-  FaEnvelope
+  FaEnvelope,
+  FaFileWord,
+  FaFilePdf
 } from 'react-icons/fa';
+import logo from './img/crop.jpeg';
 
 import './PrincipalComponent.css';
 const PrincipalComponent: FC = () => {
@@ -35,6 +37,9 @@ const PrincipalComponent: FC = () => {
         setFinishText(true);
       }, cicle[position]);
     }
+  };
+  const redirectTo = (url: string) => {
+    window.open(url, '_blank');
   };
   const deleteWriter = () => {
     if (i > 0) {
@@ -66,11 +71,7 @@ const PrincipalComponent: FC = () => {
   return (
     <div>
       <div>
-        <img
-          className="avatar"
-          src="https://www.fillmurray.com/640/360"
-          alt=""
-        />
+        <img className="avatar" src={logo} alt="" />
       </div>
       <h1>
         Hi, I'm Juan<span className="red-text">Kmacho</span>{' '}
@@ -79,9 +80,27 @@ const PrincipalComponent: FC = () => {
         <span className="red-text">{type}</span> | Developer
       </h1>
       <div>
-        <FaLinkedin className="icons" size="1.5em" />
-        <FaGithub className="icons" size="1.5em" />
-        <FaEnvelope className="icons" size="1.5em" />
+        <FaLinkedin
+          onClick={() => {
+            redirectTo('https://www.linkedin.com/in/juan-kmacho/');
+          }}
+          className="icons"
+          size="1.5em"
+        />
+        <FaGithub
+          onClick={() => {
+            redirectTo('https://github.com/kmacho16');
+          }}
+          className="icons"
+          size="1.5em"
+        />
+        <FaEnvelope
+          onClick={() => {
+            redirectTo('mailto:jccamfer@gmail.com');
+          }}
+          className="icons"
+          size="1.5em"
+        />
       </div>
     </div>
   );

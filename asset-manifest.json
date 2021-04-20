@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cefef613.chunk.css",
-    "main.js": "/static/js/main.f39e4d3d.chunk.js",
-    "main.js.map": "/static/js/main.f39e4d3d.chunk.js.map",
+    "main.js": "/static/js/main.58d1e7e1.chunk.js",
+    "main.js.map": "/static/js/main.58d1e7e1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.616a8264.js",
     "runtime-main.js.map": "/static/js/runtime-main.616a8264.js.map",
     "static/js/2.8bd84700.chunk.js": "/static/js/2.8bd84700.chunk.js",
@@ -12,16 +12,13 @@
     "index.html": "/index.html",
     "static/css/main.cefef613.chunk.css.map": "/static/css/main.cefef613.chunk.css.map",
     "static/js/2.8bd84700.chunk.js.LICENSE.txt": "/static/js/2.8bd84700.chunk.js.LICENSE.txt",
-    "static/media/copensiones.4f5bf557.jpeg": "/static/media/copensiones.4f5bf557.jpeg",
     "static/media/crop.0fbaa3bf.jpeg": "/static/media/crop.0fbaa3bf.jpeg",
-    "static/media/logo.8874eec2.svg": "/static/media/logo.8874eec2.svg",
-    "static/media/novaventa.a16ec2ab.jpeg": "/static/media/novaventa.a16ec2ab.jpeg",
-    "static/media/nutresa.b6d9ab39.jpeg": "/static/media/nutresa.b6d9ab39.jpeg"
+    "static/media/logo.8874eec2.svg": "/static/media/logo.8874eec2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.616a8264.js",
     "static/js/2.8bd84700.chunk.js",
     "static/css/main.cefef613.chunk.css",
-    "static/js/main.f39e4d3d.chunk.js"
+    "static/js/main.58d1e7e1.chunk.js"
   ]
 }

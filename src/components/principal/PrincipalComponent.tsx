@@ -1,16 +1,9 @@
 import React, { FC, useState, useEffect } from 'react';
-import {
-  FaBeer,
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-  FaFileWord,
-  FaFilePdf
-} from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import logo from './img/crop.jpeg';
 
 import './PrincipalComponent.css';
-const PrincipalComponent: FC = () => {
+const PrincipalComponent: FC<{ [id: string]: any }> = ({ avatar }) => {
   const [type, setType] = useState<string>('');
   const [message, setMessage] = useState<string[]>([
     'Backend',
@@ -70,9 +63,7 @@ const PrincipalComponent: FC = () => {
   }, [finishText]);
   return (
     <div>
-      <div>
-        <img className="avatar" src={logo} alt="" />
-      </div>
+      <img className="avatar" src={avatar ? avatar : logo} alt="" />
       <h1>
         Hi, I'm Juan<span className="red-text">Kmacho</span>{' '}
       </h1>

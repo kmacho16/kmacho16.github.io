@@ -1,76 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC, useRef } from 'react';
 import './style.css';
 import mDefault from './img/default-logo.png';
 import Prismic from '@prismicio/client';
+import { async } from 'q';
 
-const PortfolioComponent = () => {
+const PortfolioComponent: FC<{ portofolio: any[] }> = ({ portofolio = [] }) => {
   const [selectedProject, setSelectedProject] = useState<Project>();
-
   const [projects, setProjects] = useState<Project[]>([]);
+  const previewRef = useRef<null | HTMLDivElement>(null);
   const apiEndpoint = 'https://kmacho-portofolio.cdn.prismic.io/api/v2';
-  const Client = Prismic.client(apiEndpoint);
-  const transformTechs = (mtech: any[]) => {
-    const aux: string[] = [];
-    mtech.forEach(e => {
-      const a = e.techname[0].text;
-      aux.push(a);
-    });
-    return aux;
-  };
-  const fetchData = async () => {
-    const aux: Project[] = [];
-    const response = await Client.query(
-      Prismic.Predicates.at('document.type', 'projects')
-    );
-    if (response) {
-      const results = response.results;
-      results.forEach(e => {
-        console.log('ee', e);
-        const p: Project = {
-          id: e.id,
-          name: e.data.name[0].text,
-          description: e.data.description[0].text,
-          techs: transformTechs(e.data.techs),
-          image: e.data.logo.url
-        };
-        aux.push(p);
-      });
-    }
-    return aux;
+  const transformTechs = (mtech: any) => {
+    return mtech[0].text.split(',');
   };
   useEffect(() => {
-    const propp: Project[] = projects;
-    fetchData().then(response => {
-      setProjects(response);
+    portofolio.forEach(e => {
+      const dateStart = new Date(e['date-start']);
+      const dateFinish = new Date(e['date-end']);
+
+      const p: Project = {
+        id: e.name,
+        name: e.name[0].text,
+        description: e.description[0].text,
+        techs: transformTechs(e.techs),
+        image: e.logo.url,
+        dateStart: `${dateStart.getUTCMonth() +
+          1}/${dateStart.getUTCFullYear()}`,
+        dateEnd: `${dateFinish.getUTCMonth() +
+          1}/${dateFinish.getUTCFullYear()}`
+      };
+      setProjects(e => {
+        const list = e.concat(p);
+        return list;
+      });
     });
-  }, []);
+  }, [portofolio]);
 
   return (
     <div className="content">
       <h1 className="red-text-opaque uppercase">Portofolio</h1>
       <div className="cards">
         <div className="viewer">
-          <div className="medals">
-            {projects
-              ? projects.map(e => {
-                  return (
-                    <div
-                      className={`medal ${
-                        selectedProject && e.id == selectedProject.id
-                          ? 'active'
-                          : ''
-                      }`}
-                      onClick={() => {
-                        setSelectedProject(e);
-                      }}
-                    >
-                      <h1>{e.name}</h1>
-                    </div>
-                  );
-                })
-              : ''}
-          </div>
-          <div className="preview">
+          <div className="preview" ref={previewRef}>
+            {' '}
             {selectedProject ? (
               <div className="content-prev">
                 <div
@@ -81,6 +52,9 @@ const PortfolioComponent = () => {
                     })`
                   }}
                 ></div>
+                <p>
+                  {selectedProject.dateStart} - {selectedProject.dateEnd}
+                </p>
                 <p className="project-description">
                   {selectedProject.description}
                 </p>
@@ -94,6 +68,30 @@ const PortfolioComponent = () => {
               ''
             )}
           </div>
+          <div className="medals">
+            {projects
+              ? projects.map(e => {
+                  return (
+                    <div
+                      key={e.name}
+                      className={`medal ${
+                        selectedProject && e.id === selectedProject.id
+                          ? 'active'
+                          : ''
+                      }`}
+                      onClick={() => {
+                        setSelectedProject(e);
+                        if (previewRef && previewRef.current) {
+                          previewRef.current.scrollIntoView();
+                        }
+                      }}
+                    >
+                      <h1>{e.name}</h1>
+                    </div>
+                  );
+                })
+              : ''}
+          </div>
         </div>
       </div>
     </div>
@@ -105,5 +103,8 @@ interface Project {
   description: string;
   techs: string[];
   image?: any;
+  dateStart?: string;
+  dateEnd?: string;
 }
+
 export default PortfolioComponent;

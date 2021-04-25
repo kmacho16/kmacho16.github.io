@@ -10,11 +10,6 @@ html {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .red-text {
   color: #fe0e3a;
 }

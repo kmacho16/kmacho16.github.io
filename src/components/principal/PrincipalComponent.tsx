@@ -5,11 +5,7 @@ import logo from './img/crop.jpeg';
 import './PrincipalComponent.css';
 const PrincipalComponent: FC<{ [id: string]: any }> = ({ avatar }) => {
   const [type, setType] = useState<string>('');
-  const [message, setMessage] = useState<string[]>([
-    'Backend',
-    'Fronted',
-    'FullStack'
-  ]);
+  const message: string[] = ['Backend', 'Fronted', 'FullStack'];
   const [position, setPosition] = useState<number>(0);
   const [finishText, setFinishText] = useState<boolean>(false);
   const [count, setCount] = useState(0);

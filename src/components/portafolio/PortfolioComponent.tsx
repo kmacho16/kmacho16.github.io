@@ -1,14 +1,11 @@
 import React, { useState, useEffect, FC, useRef } from 'react';
 import './style.css';
 import mDefault from './img/default-logo.png';
-import Prismic from '@prismicio/client';
-import { async } from 'q';
 
 const PortfolioComponent: FC<{ portofolio: any[] }> = ({ portofolio = [] }) => {
   const [selectedProject, setSelectedProject] = useState<Project>();
   const [projects, setProjects] = useState<Project[]>([]);
   const previewRef = useRef<null | HTMLDivElement>(null);
-  const apiEndpoint = 'https://kmacho-portofolio.cdn.prismic.io/api/v2';
   const transformTechs = (mtech: any) => {
     return mtech[0].text.split(',');
   };

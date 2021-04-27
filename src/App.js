@@ -6,6 +6,7 @@ import BodyComponent from './components/body';
 import { FaMouse, FaArrowDown } from 'react-icons/fa';
 import PortfolioComponent from './components/portafolio';
 import Prismic from '@prismicio/client';
+import LoaderComponent from './components/loader';
 
 const App = () => {
   const apiEndpoint = 'https://kmacho-portofolio.cdn.prismic.io/api/v2';
@@ -35,17 +36,14 @@ const App = () => {
       setAboutMe(e.about)
       setAvatar(e.avatar)
       setPortofolio(e.portofolio)
-      console.log("adada", e.about)
     })
   }, [])
   useEffect(() => {
-    console.log("adada", aboutMe)
   }, [aboutMe])
   return (
     <div className="App">
-      <div className="bg"></div>
-      <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
+      {!portofolio && <LoaderComponent />}
+
       <div id="header" className="App-Content">
         <PrincipalComponent avatar={avatar} />
       </div>
@@ -66,7 +64,6 @@ const App = () => {
           <FaMouse size="2em" />
         </a>
       </div>
-      <div className="bg-2"></div>
       <div className="bg bg2"></div>
       <div className="bg bg3"></div>
       <div id="portafolio" className="App-body-flow">

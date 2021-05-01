@@ -37,6 +37,15 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.App-body-full {
+  background-color: #2b2d2f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-body-flow {
   min-height: 100vh;
   display: flex;

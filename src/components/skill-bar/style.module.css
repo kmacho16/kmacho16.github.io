@@ -1,0 +1,49 @@
+.point {
+  width: 30px;
+  height: 20px;
+  float: left;
+  margin: 10px 0 10px 5px;
+}
+.pointActiveDefault {
+  background: #fea443;
+}
+
+.pointLessDefault {
+  background: #815321;
+}
+
+.pointActiveBlue {
+  background: #8894dc;
+}
+
+.pointLessBlue {
+  background: #4b5f8c;
+}
+
+.pointActiveRed {
+  background: #f52047;
+}
+
+.pointLessRed {
+  background: #ad7373;
+}
+
+.title {
+  margin-top: 1em;
+  text-align: left;
+}
+.title-skill {
+  float: left;
+  font-size: 1em;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.container {
+  height: 80px;
+  width: 420px;
+}
+.title-experience {
+  float: left;
+  font-size: 12px;
+  margin-top: 10px;
+}

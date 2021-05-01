@@ -1,0 +1,11 @@
+.container {
+  margin: 0 100px;
+}
+.row {
+  width: 33.3333%;
+  float: left;
+}
+
+h2 {
+  text-align: left;
+}

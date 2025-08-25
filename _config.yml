@@ -1,0 +1,212 @@
+# Site
+repository: sproogen/resume-theme
+favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: Juan Camacho
+title: Senior software Engineer
+email: jccamfer@gmail.com
+website: https://kmacho16.github.io/
+
+# Dark Mode (true/false/never)
+darkmode: true
+
+# Social links
+# twitter_username: facespics
+github_username:  kmacho16
+# stackoverflow_username: "00000001"
+# dribbble_username: jekyll
+# facebook_username: jekyll
+# flickr_username: jekyll
+instagram_username: kmachojc
+linkedin_username: juan-kmacho
+# xing_username: jekyll
+# pinterest_username: jekyll
+# youtube_username: globalmtb
+# googleplus_username: +jekyll
+# orcid_username: 0000-0000-0000-0000
+
+# Additional icon links
+#additional_links:
+#- title: itsgoingto.be
+#  icon: fas fa-globe
+#  url: https://www.itsgoingto.be
+# - title: another link
+#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
+#   url: Link url (eg. https://google.com)
+
+# Google Analytics and Tag Manager
+# Using more than one of these may cause issues with reporting
+# gtm: "GTM-0000000"
+# gtag: "UA-00000000-0"
+# google_analytics: "UA-00000000-0"
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Full Stack Engineer with 10+ years of experience designing scalable enterprise solutions in finance, health, and insurance sectors. 
+  Proven track record in modernizing legacy systems, optimizing performance, and reducing security vulnerabilities by 100%. Skilled in 
+  leading teams and delivering robust solutions using Java, Spring Boot, Angular, React, and AWS.
+
+content:
+  
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle  
+        border: weak
+        title: Coderio 
+        link: https://www.coderio.com/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: August 2024 - Present
+        quote: >
+          Coderio is a consulting company that provides technology solutions for different industries, including financial services, insurance, and healthcare. In my role, I have been involved in projects focused on system maintenance, modernization, and performance optimization, with a strong emphasis on quality, security, and scalability.
+            
+      - layout: Left
+        border: weak
+        title: Visa 
+        link: https://www.visa.com/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: August 2024 - Present
+        description: | # this will include new lines to allow paragraphs
+            Contributed to maintenance, migration, and optimization of critical services at Visa, with a strong focus on security and performance. Key achievements include reducing over 650 security vulnerabilities to zero within 6 months, improving service efficiency through library upgrades, and implementing security alerts with mitigation playbooks, strengthening the platform’s proactive monitoring
+      
+      - layout: top-middle  
+        title: Valtech
+        border: weak
+        link: https://www.valtech.com/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: January 2023 - August 2024
+        quote: >
+          As a developer at Valtech, my role is focused on tackling key software development projects, contributing to continuous improvement and technological innovation. I lead the execution of legacy service migrations, ensuring alignment with current standards and the adoption of new technological paradigms
+      
+      - layout: Left
+        title: Discover
+        border: weak
+        link: https://www.discover.com/ 
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: January 2023 - August 2024
+        description: | # this will include new lines to allow paragraphs
+            Developed services using Java 17, Spring Boot, and Oracle DB, ensuring high performance and scalability. Additionally, I have demonstrated strong skills in integrating messaging brokers like Kafka and Kinesis, enhancing the system's ability to handle real-time data. My contribution extends to effective collaboration with multidisciplinary teams and the introduction of best practices to optimize development processes and ensure the successful delivery of projects.
+  
+      - layout: top-middle  
+        title: Epam
+        border: weak
+        link: https://www.epam.com/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: Octuber 2019  - January 2023
+        quote: >
+          As a Software Engineer, my primary responsibility was to interpret and materialize client requirements for the development of technological products. Focused on the implementation of new strategies and patterns, my emphasis was on the continuous improvement of the user interface and the addition of compelling functionalities.
+            
+      - layout: Left      
+        title: Atlassian
+        border: weak
+        link: https://www.atlassian.com/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Software Engineer
+        caption: January 2022 - January 2023
+        description: | # this will include new lines to allow paragraphs
+            My contribution to Atlassian focused on developing tools and strategically implementing backups for internal company use. Utilizing advanced technologies such as Spring Boot and Java 15, I worked with a wide suite of databases, including PostgreSQL, MySQL, Monarch, and Dynamo, all implemented in the AWS cloud. This project highlighted my ability to work with diverse and complex technologies, providing effective solutions for the company's internal needs
+
+      - layout: Left
+        title: Novaventa
+        border: weak
+        link: https://novaventa.com/  
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Fullstack Engineer
+        caption: August 2020 - January 2022
+        description: | # this will include new lines to allow paragraphs
+            In the Novaventa project, I designed and developed an enrollment platform that had a notable impact. I successfully increased monthly user registrations from 1000 to 6000, marking a significant shift in user engagement. The platform was seamlessly integrated with various services, providing a comprehensive and efficient experience for end-users. During this project, I maintained a direct relationship with stakeholders, facilitating dynamic and effective communication that contributed to the project's success.
+
+      - layout: Left
+        title: Lever
+        border: weak
+        link: https://www.lever.co/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Frontend Engineer
+        caption: October 2019 - July 2020
+        description: | # this will include new lines to allow paragraphs
+            As a member of the development team, I made significant contributions to the Lever project, a leading recruitment platform. My focus was on developing client-side modules, where I implemented innovative strategies and patterns to enhance the user interface. Additionally, I added new features that enriched the user experience, solidifying the continuous success of the platform.
+
+      - layout: top-middle  
+        title: Stefanini Latam
+        border: weak
+        link: https://stefanini.com/es
+        # link_text: https://www.coderio.com/
+        sub_title: Software Engineer
+        caption: March 2018  - October 2019
+        quote: >
+          In my role as a Fullstack Developer at Stefanini Latam, I had the opportunity to work on diverse projects spanning a wide range of technologies. My skills were deployed in PHP, Java, JavaScript, HTML environments, and databases such as MySQL and PostgreSQL. Additionally, I utilized various prominent frameworks, including Symfony for PHP, Spring Boot for Java, Angular for JavaScript, and Laravel for PHP.            
+      
+      - layout: Left      
+        title: Catastro
+        border: weak
+        link: https://www.catastrobogota.gov.co/
+        # link_text: https://www.coderio.com/
+        sub_title: Software Developer
+        caption: January 2019 - October 2019
+        description: | # this will include new lines to allow paragraphs
+            I collaborated on the development of a comprehensive system for Catastro, the Colombian government entity responsible for property valuation in major cities. This project involved migrating physical requests to information systems, significantly improving efficiency in cadastral process control and management.
+      
+      - layout: Left
+        title: Grupo Nutresa
+        border: weak
+        link: https://gruponutresa.com/  
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Fullstack Engineer
+        caption: August 2018 - January 2019
+        description: | # this will include new lines to allow paragraphs
+            I supported the development and maintenance of a platform for Grupo Nutresa, focused on the control and monitoring of crucial aspects of occupational health, such as accidents, incidents, incapacitations, among others. This platform played a vital role in the proactive management of health and safety within the organization.
+      
+      - layout: Left
+        title: Colpensiones
+        border: weak
+        link: https://www.colpensiones.gov.co/
+        # link_text: https://www.coderio.com/
+        sub_title: Senior Frontend Engineer
+        caption: January 2018 - August 2018
+        description: | # this will include new lines to allow paragraphs
+            I played a key role in the team that developed SIFT, a comprehensive system for pension management in Colombia. Colpensiones, being a government entity, required a robust system to address all areas related to citizens' pensions. My contribution to the development of SIFT involved implementing effective solutions to ensure efficient and accurate management of pension information.
+  
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle  
+        title: Francisco Jose de Caldas University 
+        quote: >
+          The Universidad Distrital Francisco José de Caldas is one of the leading public higher education institutions in Colombia, recognized for its strong focus on applied research, technological innovation, and the training of highly skilled professionals in engineering, science, arts, and education. With more than 70 years of history, it is the most important public university in Bogotá and one of the country’s top references in engineering and technology programs.
+        
+      - layout: left
+        title: B.Sc. in Telematic Engineer 
+        caption: 2018 - 2021
+        description: | # this will include new lines to allow paragraphs
+          The Telematics Engineering program combines the fields of telecommunications and information technologies, preparing professionals to design, implement, and manage communication networks and distributed software systems. The program provides an interdisciplinary foundation in telecommunications, networking, programming, cloud services, and cybersecurity, enabling graduates to face the challenges of digital transformation and Industry 4.0.
+      
+      - layout: left
+        title: Technical Degree in Data Technologies Systematization
+        caption: 2010 - 2017
+        description: | # this will include new lines to allow paragraphs
+          The Data Technologies Systematization program is oriented towards training professionals in informatics, databases, and information systems development. Its main focus is on the administration, modeling, and analysis of data, as well as the design and implementation of software solutions to support business management and decision-making processes.
+
+# Footer
+footer_show_references: true
+# references_title: References on request (Override references text)
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
